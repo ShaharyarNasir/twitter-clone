@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Feed from "../components/Feed";
 import Sidebar from "../components/Sidebar";
-// import Widgets from "../components/Widgets";
+import Widgets from "../components/Widgets";
 import { getProviders, getSession, useSession } from "next-auth/react";
 import Login from "../components/Login";
-// import Modal from "../components/Modal";
+import Modal from "../components/Modal";
 import { modalState } from "../atoms/modalAtom";
 import { useRecoilState } from "recoil";
 
@@ -24,12 +24,12 @@ export default function Home({ trendingResults, followResults, providers }) {
       <main className="bg-black min-h-screen flex max-w-[1500px] mx-auto">
         <Sidebar />
         <Feed />
-        {/* <Widgets
+        <Widgets
           trendingResults={trendingResults}
           followResults={followResults}
-        /> */}
+        />
 
-        {/* {isOpen && <Modal />} */}
+        {isOpen && <Modal />}
       </main>
     </div>
   );
