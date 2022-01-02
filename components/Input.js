@@ -17,16 +17,17 @@ import {
 import { getDownloadURL, ref, uploadString } from "@firebase/storage";
 import { signOut, useSession } from "next-auth/react";
 import dynamic from "next/dynamic";
+// const Picker = dynamic(() => import("emoji-picker-react"), { ssr: false });
 import { Picker } from "emoji-mart";
 import "emoji-mart/css/emoji-mart.css";
 
 function Input() {
+    const { data: session } = useSession();
     const [input, setInput] = useState("");
     const [loading, setLoading] = useState(false);
     const [selectedFile, setSelectedFile] = useState(null);
     const filePickerRef = useRef(null);
     const [showEmojis, setShowEmojis] = useState(false);
-    const { data: session } = useSession();
 
     const sendPost = async () => {
         if (loading) return;
