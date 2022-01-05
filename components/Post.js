@@ -6,7 +6,6 @@ import {
     orderBy,
     query,
     setDoc,
-
 } from "@firebase/firestore";
 import {
     ChartBarIcon,
@@ -16,8 +15,6 @@ import {
     ShareIcon,
     SwitchHorizontalIcon,
     TrashIcon,
-
-
 } from "@heroicons/react/outline";
 import {
     HeartIcon as HeartIconFilled,
