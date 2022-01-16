@@ -85,7 +85,7 @@ function Input() {
         >
             <img
                 src={session.user.image}
-                alt=""
+                alt="#"
                 className="h-11 w-11 rounded-full cursor-pointer"
                 onClick={signOut}
             />
